@@ -9,29 +9,45 @@ import org.hibernate.validator.constraints.Length;
 public class User {
 	
 	private Integer id;
-	
-	@NotEmpty(message="用户名不能为空")
-	@Length(min=4 ,max=12,message="用户名的长度不合法")
+
+
+	@NotEmpty(message = "用户名不能为空")
+	@Length(min = 4, max = 12, message = "用户名的长度不合法")
 	private String username;
-	@NotEmpty(message="密码不能为空")
+
+
+	@NotEmpty(message = "密码不能为空")
 	private String password;
+
+
+	private String nickname;
+	private Date birthday;
+	private int gender;
+	private int locked;
+	private Date create_time;
+	private Date update_time;
+	private String url;
+	private int score;
+	private int role;
+
+
+	private String head_picture;
 	
-	private String nickname            ;
-	private Date birthday            ;
-	private int gender              ;
-	private int locked              ;
-	private Date create_time         ;
-	private Date update_time         ;
-	private String url                 ;
-	private int score               ;
-	private int  role                ;
 	
 	
-	
+	public String getHead_picture() {
+		return head_picture;
+	}
+
+
+	public void setHead_picture(String head_picture) {
+		this.head_picture = head_picture;
+	}
+
+
 	public Integer getId() {
 		return id;
 	}
-
 
 
 	public void setId(Integer id) {
@@ -39,11 +55,9 @@ public class User {
 	}
 
 
-
 	public String getUsername() {
 		return username;
 	}
-
 
 
 	public void setUsername(String username) {
@@ -51,11 +65,9 @@ public class User {
 	}
 
 
-
 	public String getPassword() {
 		return password;
 	}
-
 
 
 	public void setPassword(String password) {
@@ -63,11 +75,9 @@ public class User {
 	}
 
 
-
 	public String getNickname() {
 		return nickname;
 	}
-
 
 
 	public void setNickname(String nickname) {
@@ -75,11 +85,9 @@ public class User {
 	}
 
 
-
 	public Date getBirthday() {
 		return birthday;
 	}
-
 
 
 	public void setBirthday(Date birthday) {
@@ -87,11 +95,9 @@ public class User {
 	}
 
 
-
 	public int getGender() {
 		return gender;
 	}
-
 
 
 	public void setGender(int gender) {
@@ -99,11 +105,9 @@ public class User {
 	}
 
 
-
 	public int getLocked() {
 		return locked;
 	}
-
 
 
 	public void setLocked(int locked) {
@@ -111,11 +115,9 @@ public class User {
 	}
 
 
-
 	public Date getCreate_time() {
 		return create_time;
 	}
-
 
 
 	public void setCreate_time(Date create_time) {
@@ -123,11 +125,9 @@ public class User {
 	}
 
 
-
 	public Date getUpdate_time() {
 		return update_time;
 	}
-
 
 
 	public void setUpdate_time(Date update_time) {
@@ -135,11 +135,9 @@ public class User {
 	}
 
 
-
 	public String getUrl() {
 		return url;
 	}
-
 
 
 	public void setUrl(String url) {
@@ -147,11 +145,9 @@ public class User {
 	}
 
 
-
 	public int getScore() {
 		return score;
 	}
-
 
 
 	public void setScore(int score) {
@@ -159,11 +155,9 @@ public class User {
 	}
 
 
-
 	public int getRole() {
 		return role;
 	}
-
 
 
 	public void setRole(int role) {
@@ -171,8 +165,13 @@ public class User {
 	}
 
 
+	public User() {
 
-	public User( String username, String password, int role) {
+
+	}
+
+
+	public User(String username, String password, int role) {
 		super();
 		this.username = username;
 		this.password = password;
@@ -180,11 +179,15 @@ public class User {
 	}
 
 
-
-	public User() {
-		super();
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", username=" + username + ", password=" + password + ", nickname=" + nickname
+				+ ", birthday=" + birthday + ", gender=" + gender + ", locked=" + locked + ", create_time="
+				+ create_time + ", update_time=" + update_time + ", url=" + url + ", score=" + score + ", role=" + role
+				+ "]";
 	}
-	
+
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -193,7 +196,8 @@ public class User {
 		result = prime * result + ((username == null) ? 0 : username.hashCode());
 		return result;
 	}
-	
+
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -217,15 +221,4 @@ public class User {
 	}
 
 
-
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", username=" + username + ", password=" + password + ", nickname=" + nickname
-				+ ", birthday=" + birthday + ", gender=" + gender + ", locked=" + locked + ", create_time="
-				+ create_time + ", update_time=" + update_time + ", url=" + url + ", score=" + score + ", role=" + role
-				+ "]";
-	}
-
-	
-	
 }

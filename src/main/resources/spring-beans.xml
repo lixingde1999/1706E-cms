@@ -12,8 +12,8 @@
 
 
 	<!-- 1、注解扫描器 -->
-	<!-- todo -->
-	<context:component-scan base-package="com.wangting.cms" >
+	
+	<context:component-scan base-package="com.lixingde.cms" >
 		<!-- 排除要要扫描的controller -->
 		<context:exclude-filter type="annotation"
 			expression="org.springframework.stereotype.Controller" />
@@ -76,9 +76,9 @@
 	<!-- 7、配置aop -->
 	<aop:config>
 		<!-- 配置切点表达式 -->
-		<!-- todo -->
+		
 		<aop:pointcut
-			expression="execution(* com.wangting.cms.service.impl.*.*(..))" id="pointcut" />
+			expression="execution(* com.lixingde.cms.service.impl.*.*(..))" id="pointcut" />
 		<!-- 关联事务 -->
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="pointcut" />
 
@@ -87,9 +87,9 @@
 	<!--8 扫描mapper -->
 
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<!-- basePackage :mapper接口所在的包 -->
-		<!-- todo -->
-		<property name="basePackage" value="com.wangting.cms.dao"></property>
+		
+		
+		<property name="basePackage" value="com.lixingde.cms.dao"></property>
 
 	</bean>
 

@@ -3,6 +3,7 @@ package com.wangting.cms.dao;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
@@ -25,7 +26,11 @@ public interface UserMapper {
 	@Select("SELECT * FROM cms_user ")
 	List<User> list();
 	
-	@Update("update cms_user set locked=1 where id=#{id}")
-	int update(Integer id);
+	@Update("update cms_user set locked=#{locked} where id=#{id}")
+	int update(@Param("id")Integer id ,@Param("locked")String locked);
+	//
+	//上傳圖片
+	@Update("update cms_user set head_picture=#{head_picture} where id=#{id}")
+	int addHead_picture(User user);
 	
 }

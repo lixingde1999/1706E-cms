@@ -14,7 +14,7 @@ import com.wangting.cms.service.ChannelService;
 @Controller
 public class SearchController {
 
-
+//首页模糊查询
 	@Autowired
 	ChannelService chnlService;
 	

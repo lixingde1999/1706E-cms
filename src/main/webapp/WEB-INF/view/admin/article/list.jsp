@@ -32,8 +32,6 @@ function toDetail(id){
 }
 
 </script>
-
-
 </head>
 <body>
 <div class="container-fluid">
@@ -73,9 +71,7 @@ function toDetail(id){
 					<td>${article.cat.name}</td>
 					<td><button type="button" class="btn btn-info" onclick="toDetail(${article.id})">详情</button> </td>
 				</tr>
-
 			</c:forEach>
-
 		</table>
 		<div>
 			${page}

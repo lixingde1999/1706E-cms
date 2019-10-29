@@ -2,8 +2,8 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.wangting.cms.dao.ChannelMapper">
-	<select id="findById" resultType="channel">
+<mapper namespace="com.lixingde.cms.dao.ChannelMapper">
+	<select id="findById" resultType="channel">  
 		 SELECT * FROM cms_channel WHERE id = #{value} limit 1
 	</select>  
 </mapper>

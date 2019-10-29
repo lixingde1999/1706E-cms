@@ -7,9 +7,9 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 <!-- 别名配置 -->
  <typeAliases>
     <!-- todo -->
-   <package name="com.wangting.cms.entity"/>
+   <package name="com.lixingde.cms.entity"/>
    <!-- todo -->
-   <package name="com.wangting.cms.vo"/>
+   <package name="com.lixingde.cms.vo"/>
  </typeAliases>
  
  

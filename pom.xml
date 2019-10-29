@@ -1,9 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.wangting</groupId>
-  <artifactId>wangting-cms</artifactId>
+  <groupId>com.lixingde</groupId>
+  <artifactId>lixingde-cms</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
+
     <!-- 定义主要版本号 -->
 	<properties>
 		<spring.version>5.1.5.RELEASE</spring.version>
@@ -33,11 +34,17 @@
 
 	<!-- jar依赖 -->
 	<dependencies>
+	<!--  pom.xml报错时，找不到Mybatis中xml 文件 （拒绝访问）  -->
+	<!--   <dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-resources-plugin</artifactId>
+			<version>2.6</version>
+		</dependency> -->
 		<!--  引入自己的工具类 -->
 		<dependency>
-			<groupId>com.wangting</groupId>
-  			<artifactId>cms-common</artifactId>
-  			<version>0.0.1-SNAPSHOT</version>
+			<groupId>com.lixingde</groupId>
+  <artifactId>cms-common</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	
 		<!-- spring 及springMVC -->
@@ -277,7 +284,7 @@
 				<configuration>
 					<httpConnector>
 					    <!--  项目端口号 -->
-						<port>8083</port>
+						<port>80</port>
 						 <!--项目路径 -->
 						<host>localhost</host>
 					</httpConnector>

@@ -130,6 +130,24 @@
 			     </ol>
 			   </div>
 			
+			
+			   <div class="card">专题文章</div>
+			   <c:forEach items="${specials}" var="special">
+					   	<div class="card">
+					   <div class="card-header">${special.title}</div>
+					      <ol>
+					    <c:forEach items="${special.artilceList}" var="article">
+					      <li class="text-truncate text-center">
+					      	<a href="javascript:myopen(${article.id })">${article.title}</a>
+					      </li>
+					    
+					    
+					    </c:forEach>
+					     </ol>
+					   </div>
+			   </c:forEach>
+			   
+			
 			</div>
 		</div>
 	</div>

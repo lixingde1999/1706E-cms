@@ -20,5 +20,23 @@ public class LinkServiceImpl implements LinkService{
 		// TODO Auto-generated method stub
 		return linkMapper.linklist();
 	}
-	
+
+	@Override
+	public int addlink(Link link) {
+		// TODO Auto-generated method stub
+		return linkMapper.addlink(link);
+	}
+	//友情链接的删除
+	@Override
+	public int deletelink(Integer id) {
+		// TODO Auto-generated method stub
+		return linkMapper.deletelink(id);
+	}
+
+	/*@Override
+	public int linkupdate(Integer id) {
+		// TODO Auto-generated method stub
+		return linkMapper.linkupdate(id);
+	}
+	*/
 }

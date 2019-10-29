@@ -19,7 +19,7 @@
     <c:when test="${sessionScope.SESSION_USER_KEY != null}">
    	 <li class="nav-item">
    		<a class="nav-link" href="/my/home">
-		<img alt="" src="/resource/images/default_avatar.png" style="max-height: 2.5rem" class="rounded img-fluid">
+		<img alt="" src="/pic/${sessionScope.SESSION_USER_KEY.head_picture }" style="max-height: 2.5rem" class="rounded img-fluid">
    		</a>
    	 </li>
    	 <li class="nav-item">

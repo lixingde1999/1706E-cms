@@ -15,11 +15,14 @@ public interface UserService {
 //登录
 	User login(User user);
 	
-	//用户管理
+	//用户管理//用户管理 禁用和解封
 	List<User> list();
 	
 	//修改禁止该用户
-	int update(Integer id);
+	int update(Integer id ,String locked);
+	
+	//个人主要上传头像
+	int addHead_picture(User user);
 	
 	
 }

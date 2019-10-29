@@ -7,9 +7,9 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 	<!-- 扫描器 -->
-	<!--  todo -->
+	
 	<context:component-scan
-		base-package=" com.wangting.cms.controller"></context:component-scan>
+		base-package=" com.lixingde.cms.controller"></context:component-scan>
 	<!-- 视图解析图 -->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -26,17 +26,20 @@
 			<mvc:mapping path="/**"/>
 			<!-- 配置排除的拦截资源 -->
 			<mvc:exclude-mapping path="/resource/**"/>
+			<mvc:exclude-mapping path="/html/**"/>
 			<mvc:exclude-mapping path="/search/**"/>
-			<mvc:exclude-mapping path="/admin/**"/>
 			<mvc:exclude-mapping path="/article/show"/>
+			<mvc:exclude-mapping path="/special/**"/>
 			<mvc:exclude-mapping path="/pic/**"/>
 			<mvc:exclude-mapping path="/"/>
+			<mvc:exclude-mapping path="/commnentlist"/>
+			<mvc:exclude-mapping path="/commnentinsert"/>
 			<mvc:exclude-mapping path="/index"/>
 			<mvc:exclude-mapping path="/user/login"/>
 			<mvc:exclude-mapping path="/user/register"/>
 			<mvc:exclude-mapping path="/user/checkExist"/>
 			<!-- 拦截器的实现类 -->
-			<bean class="com.wangting.cms.web.AuthIntercepter"></bean>
+			<bean class="com.lixingde.cms.web.AuthIntercepter"></bean>
 		</mvc:interceptor>
 	</mvc:interceptors>
 	

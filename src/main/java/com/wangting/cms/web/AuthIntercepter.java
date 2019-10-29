@@ -7,7 +7,7 @@ import org.springframework.web.servlet.HandlerInterceptor;
 
 import com.wangting.cms.comon.ConstClass;
 import com.wangting.cms.entity.User;
-
+//拦截器
 public class AuthIntercepter implements HandlerInterceptor {
 
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)

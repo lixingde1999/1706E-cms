@@ -58,17 +58,28 @@ public class UserServiceImpl implements UserService{
 		//登录失败
 		return null;
 	}
-@Override
-public List<User> list() {
-	// TODO Auto-generated method stub
-	return userMapper.list();
-}
-@Override
-public int update(Integer id) {
-	// TODO Auto-generated method stub
-	return userMapper.update(id);
-}
 	
+	//獲取所以用戶
+		@Override
+		public List<User> list() {
+			// TODO Auto-generated method stub
+			return userMapper.list();
+		}
+		
+		//解封用戶
+		@Override
+		public int update(Integer id ,String locked) {
+			// TODO Auto-generated method stub
+			return userMapper.update(id ,locked);
+		}
+		
+		
+		@Override
+		public int addHead_picture(User user) {
+			// TODO Auto-generated method stub
+			return userMapper.addHead_picture(user);
+		}
+			
 	
 	
 
